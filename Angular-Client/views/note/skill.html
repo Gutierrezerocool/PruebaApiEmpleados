@@ -1,0 +1,23 @@
+<div class="card-panel contenedor z-depth-3">
+<h4 class="center-align">{{title}}</h4>
+
+	<form ng-submit="saveSkill()">
+
+		<div class="input-field" style="visibility: hidden">
+			<input placeholder="{{skill.id}}"  type="text" ng-model="Note.empleado_id=skill.id">
+		</div>
+
+		<div class="input-field">
+			<input placeholder="Habilidad" type="text" ng-model="Note.name" required>
+
+		</div>
+
+		<div class="input-field">
+			<input placeholder="Puntaje" type="text" ng-model="Note.point" required>
+		</div>
+
+		<button class="btn waves-effect blue darken-3" type="submit">
+				{{button}}
+		</button>
+	</form>
+</div>

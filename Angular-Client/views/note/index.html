@@ -1,0 +1,31 @@
+<div class="input-field">
+    <i class="material-icons prefix">search</i>
+    <input placeholder="Buscar" type="text" ng-model="search">
+</div>
+
+<div class="row">
+    <div ng-repeat="Note in Notes | filter:search" class="col s4 m4">
+        <div class="card amber darken-4">
+            <div class="card-content white-text">
+              <span class="card-title"><strong>Empleado:</strong> {{Note.name}}</span>
+              <p><strong>Correo:</strong> {{Note.email}}</p>
+              <p><strong>Puesto:</strong> {{Note.job}}</p>
+              <p><strong>Dirección:</strong> {{Note.address}}</p>
+              <p><strong>Nacimiento: {{Note.birth | date:"dd/MM/yyyy"}}</strong></p>
+              <hr>
+            </div>
+            <div class="card-action">
+              <a href="#/empleados/edit/{{Note.id}}"><i class="material-icons">edit</i></a>
+              <a href="#" ng-click="removeNote(Note.id)"><i class="material-icons">delete</i></a>
+              <a href="#/habilidades/new/{{Note.id}}"><i class="material-icons">format_list_bulleted</i></a>
+              
+            </div>
+        </div>
+    </div>
+</div> 
+
+  <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a href="#/empleados/new" class="btn-floating btn-large waves-effect waves-light red">
+      <i class="large material-icons">add</i>
+    </a>
+  </div>

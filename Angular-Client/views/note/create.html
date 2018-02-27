@@ -1,0 +1,29 @@
+<div class="card-panel contenedor z-depth-3">
+<h4 class="center-align">{{title}}</h4>
+
+	<form ng-submit="saveNote()">
+		<div class="input-field">
+			<input placeholder="Nombre" type="text" ng-model="Note.name" required>
+		</div>
+
+		<div class="input-field">
+			<input placeholder="Email" type="email" ng-model="Note.email" required>
+		</div>
+
+		<div class="input-field">
+			<input placeholder="Puesto" type="text" ng-model="Note.job" required>
+		</div>
+
+		<div class="input-field">
+			<input placeholder="birth" type="date" ng-model="Note.birth" required>
+		</div>
+
+		<div class="input-field">
+			<textarea placeholder="Dirección" class="materialize-textarea" ng-model="Note.address" required></textarea>
+		</div>
+
+		<button class="btn waves-effect blue darken-3" type="submit">
+				{{button}}
+		</button>
+	</form>
+</div>
