@@ -1,0 +1,11 @@
+Buen día,
+
+El proyecto tiene sus respectivas migraciones para que por favor ejecutes el comando php artisan migrate, Fue probado con xampp.
+Tienes que correr el comando php artisan serve y configurar la base de datos.
+La configuracion de la base de datos en el archivo usada fue la siguiente:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_DATABASE=empleados
+DB_USERNAME=root
+DB_PASSWORD=''
+
